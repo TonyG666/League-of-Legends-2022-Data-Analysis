@@ -98,7 +98,7 @@ The boxplot shows various information of carry score such as median, interquatil
 <iframe src="assets/boxplot.html" width=800 height=600 frameBorder=0></iframe>
 
 
-### Below is a grouped table showing respective mean standardized KDA, GPM, CSPM, and carry score ###
+### Grouped table of respective mean standardized KDA, GPM, CSPM, and carry score for the five positions###
 
 ```
 print(league_position.to_markdown(index=True))
@@ -113,3 +113,14 @@ print(league_position.to_markdown(index=True))
 | top        |        -0.174883   |           0.321859 |            0.489504 |      0.21216  |
 
 * It demonstrates the mean statistics for each position in League of Legends and can be used for comparison among different positions. For example, bottom laners has the highest KDA, GPM, CSPM, and carry score in standardized units among all other positions.
+
+
+
+# Assessment of Missingness #
+
+## NMAR Analysis ##
+
+We don't believe that there is column in our dataset that is NMAR(NMAR means that the missingness of a column in our dataset is dependent on the missing values themselves). We would like to obtain additional information about possible correlation between datacompleteness and missingness in teamname column in order to see the type of missingness of the teamname column.
+
+
+<iframe src="assets/missingness_perm.html" width=800 height=600 frameBorder=0></iframe>
