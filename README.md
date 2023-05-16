@@ -1,4 +1,4 @@
-# League of Legends 2022 Data Analysis #
+# League of Legends 2022 Data Analysis
 
 By Ricky Zhu(r2zhu@ucsd.edu) and Tony Guo(xig003@ucsd.edu)
 
@@ -34,7 +34,7 @@ By examining the match data from 2022, we can provide evidence-based conclusions
 2. **teamname**: The **name of the team** the player is in.
 
 3. **position**: The player's **position** in a single eSport match. League of Legends only has five positions: Top laners(**top**), Jungle(**jng**), Mid laners(**mid**), Bottom laners(**bot**), and Support(**sup**). 
-*Note that in a League of Legends map, there are three lanes total and jungle areas. Top laner covers top lane, Mid laner covers mid lane, Jungle covers jungle areas, Support and Bottom laner cover the bottom lane.*
+* *Note that in a League of Legends map, there are three lanes total and jungle areas. Top laner covers top lane, Mid laner covers mid lane, Jungle covers jungle areas, Support and Bottom laner cover the bottom lane.*
 
 4. **kills**: The **number of kills** a player have in a single eSport match.
 
@@ -43,7 +43,7 @@ By examining the match data from 2022, we can provide evidence-based conclusions
 6. **death**: The **number of deaths** a player have in a single eSport match.
 
 7. **earned gpm**: earned **Gold Per Minute** by player in a single game. 
-*Gold in League of Legends is used to buy items in order to make your character stronger.*
+* *Gold in League of Legends is used to buy items in order to make your character stronger.*
 
 8. **cspm**: **Creep Score Per Minute**, indicating the number of **minions** killed by a player per minute.
 
@@ -51,31 +51,29 @@ By examining the match data from 2022, we can provide evidence-based conclusions
 # Cleaning and Exploratory Data Analysis
 
 
-## Data Cleaning
+## Data Cleaning Process
 
 1. We create a **copy** of the original dataset in order to keep it unchanged.
 
-2. Each team has five players and a match contains two teams and so ten players. After examining the file, we find every 11th row and 12th row to be two teams' overall statistics and the ten rows before them to be these two teams' individual players' statistics of this match. As our goal is to examine individual performances of top laners and mid laners, we drop all rows of whole teams.
+2. Each team has **five players** and a match contains **two teams** and so ten players. After examining the file, we find **every 11th row and 12th row** to be two teams' overall statistics and the **ten rows before them** to be these two teams' individual players' statistics of this match. As our goal is to examine individual performances of top laners and mid laners, we drop all rows of whole teams.
 
 3. The 'datacompleteness' column contains three kinds of values: 'complete', 'ignore', and 'partial'.
-We replace 'ignore' and 'partial' with False and 'complete' with True.
-The boolean values make it easier to do analysis.
+We replace 'ignore' and 'partial' with **False** and 'complete' with **True** because the boolean values make it easier to do analysis.
 
-4. After examination of original file, we see tha the 'teamname' column initially have NaN values and 
-also a kind of values called "unknown team". We replace them with NaN to clean the data.
+4. After examination of original file, we see that the 'teamname' column initially have NaN values and also a kind of values called "unknown team". We replace them with **NaN** to clean the data.
 
-5. kda_standardized: Kill Death Assist Ratio by a player in a single game, calculated by 
-**(Kills + Assists) / Deaths**, and then standardized. Unstandardized **Kills**, **Assists**, **Deaths** are three columns we kept before. Refer to **Relevant Columns** section above.
+5. We add a column called **kda_standardized**: **Kill Death Assist Ratio** by a player in a single game, calculated by 
+**(Kills + Assists) / Deaths**, and then standardized. Unstandardized Kills, Assists, Deaths are three columns we kept before(Refer to Relevant Columns section above).
 
-6. gpm_standardized: Earned gold per minute by player in a single game, and then standardized. Unstandardized GPM is provided in original file directly.
+6. We add a column called **gpm_standardized**: get Earned gold per minute and then standardize. Unstandardized GPM is provided in original file directly.
 
-7. cspm_standardized: Creep score per minute, indicating the number of minion killed by a player per minute, and then standardized. Unstandardized CSPM is provided in original file directly.
+7. We add a column called **cspm_standardized**: get Creep score per minute and then standardize. Unstandardized CSPM is provided in original file directly.
 
-8. **carry_score**: For our analysis, we calculate a score for every player called 'carry_score'. It is our self-designed measurement of how well a player performs in a game, calculated by **(kda_standardized + gpm_standardized + cspm_standardized) / 3**. The reason why we use these three statistics is that these three factors impact the development of a League character the most. The higher the three statistics are, the better a player's possible performance would be in various aspects such as the amount of damage dealt or the quality of the player's items. Also, these three statistics are the most crucial factors in determining which player is the Most Valuable Player(i.e. MVP) in a single match.
+8. We add a column called **carry_score**: For our analysis, we calculate a score for every player called 'carry_score'. It is our **self-designed** measurement of **how well a player performs in a game**, calculated by **(kda_standardized + gpm_standardized + cspm_standardized) / 3**. The reason why we use these three standardized statistics is that these three factors impact the development of a League character the most. The higher the three statistics are, the better a player's possible performance would be in various aspects such as the amount of damage dealt or the quality of the player's items. Also, these three statistics are the most crucial factors in determining which player is the **Most Valuable Player**(i.e. **MVP**) in a single match.
 
-9. We then drop the columns not in standardized units, specifically **kills**, **assists**, **deaths**, **earned gpm**, **cspm**
+9. We then **drop** the columns not in standardized units, specifically they are **kills**, **assists**, **deaths**, **earned gpm**, **cspm**.
 
-### Below is the head of our dataframe after cleaning ###
+### The head of our DataFrame(After Cleaning) ###
 
 ```
 print(league_head.to_markdown(index=False))
@@ -89,7 +87,7 @@ print(league_head.to_markdown(index=False))
 | True               | Fredit BRION Challengers | bot        |          -0.759038 |           0.111582 |            0.506755 |    -0.0469004 |
 | True               | Fredit BRION Challengers | sup        |          -0.675285 |          -1.45253  |           -1.57038  |    -1.23273   |
 
-### Univariate histogram showing the distribution of the standardized KDA among all players. ###
+### Univariate histogram showing the distribution of the standardized KDA among all players ###
 
 The x axis shows standardized KDA in standardized units, ranging from -1 to 8, with a bin size of 0.5 standardized units. The y axis shows the amount of players with their specific standardized KDA.
 The graph is skewed to the right, inferring that most players' standardized KDA is in the range of -1~0 standardized unit, which further means that a lot of players' KDA is relatively lower compared to the average value within the dataset. 
