@@ -1,4 +1,4 @@
-# League-of-Legends-2022-Data-Analysis
+# League of Legends 2022 Data Analysis
 
 # Introduction
 League of Legends (LoL) is a highly popular and competitive multiplayer online battle arena (MOBA) game developed and published by Riot Games. With a massive player base worldwide, LoL has become a staple in the eSports industry. Players assume the roles of powerful champions, forming teams and battling against each other in intense strategic matches. The game features a vast roster of unique champions, each with their own abilities and playstyles, providing endless possibilities for dynamic gameplay and strategic depth. 
@@ -7,9 +7,12 @@ Throughout our gaming experience League of Legends, we are interested on the que
 
 To answer the question, we used the dataset contains contains 2022 League of Legends eSports match data from OraclesElixir, as it's representative for the League of Legends player population and meta for 2022. Also it provides valuable insights into the performance and dynamics of professional teams in the game for the future. Analyzing this dataset can offer a deeper understanding of the strategies, strengths, and weaknesses of different roles within a team.
 
-By examining the match data from 2022, we can provide evidence-based conclusions about the impact and effectiveness of top and mid laners in carrying their teams to victory. 
+By examining the match data from 2022, we can provide evidence-based conclusions about the impact and effectiveness of top and mid laners in carrying their teams to victory.
+Maybe our conclusion about which position carries more can activate potential players to try playing that position or the specific champion/hero more often and even train themselves to be team leaders.
 
-**2022 League of Legends eSports match data from OraclesElixir dataset breakdown:**
+
+*2022 League of Legends eSports match data from OraclesElixir*
+**dataset breakdown:**
 
 Rows: Each League of Legends eSports match in 2022. 
 
