@@ -135,3 +135,7 @@ The distribution of datacompleteness column when teamname column is missing and 
 ## MCAR ##
 
 <iframe src="assets/datacompleteness_perm.html" width=800 height=600 frameBorder=0></iframe>
+
+<iframe src="assets/missingness_pos.html" width=800 height=600 frameBorder=0></iframe>
+
+<iframe src="assets/position_perm.html" width=800 height=600 frameBorder=0></iframe>
