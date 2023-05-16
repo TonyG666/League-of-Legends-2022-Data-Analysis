@@ -1,5 +1,6 @@
 # League of Legends 2022 Data Analysis
 
+By Ricky Zhu(r2zhu@ucsd.edu) and Tony Guo(xig003@ucsd.edu)
 
 
 # Introduction
