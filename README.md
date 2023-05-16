@@ -128,7 +128,7 @@ We don't believe that there is column in our dataset that is NMAR(NMAR means tha
 
 The distribution of datacompleteness column when teamname column is missing and the distribution of datacompleteness column when teamname column is not missing
 
-<iframe src="assets/missingness_perm.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/missingness_tmnm.html" width=800 height=600 frameBorder=0></iframe>
 
 
 
