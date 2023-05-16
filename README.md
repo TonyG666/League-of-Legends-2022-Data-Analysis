@@ -2,16 +2,22 @@
 
 By Ricky Zhu(r2zhu@ucsd.edu) and Tony Guo(xig003@ucsd.edu)
 
-
 # Introduction
-League of Legends (LoL) is a highly popular and competitive multiplayer online battle arena (MOBA) game developed and published by Riot Games. With a massive player base worldwide, LoL has become a staple in the eSports industry. Players assume the roles of powerful champions, forming teams and battling against each other in intense strategic matches. The game features a vast roster of unique champions, each with their own abilities and playstyles, providing endless possibilities for dynamic gameplay and strategic depth. 
 
-Throughout our gaming experience League of Legends, we are interested on the question: Which role “carries” (does the best) in their team more often: Top (top) or Mid laners(mid)? 
+### Some background information about our dataset ###
 
-To answer the question, we used the dataset contains contains 2022 League of Legends eSports match data from OraclesElixir, as it's representative for the League of Legends player population and meta for 2022. Also it provides valuable insights into the performance and dynamics of professional teams in the game for the future. Analyzing this dataset can offer a deeper understanding of the strategies, strengths, and weaknesses of different roles within a team.
+![Image not found]
+
+**League of Legends (LoL)** is a highly popular and competitive multiplayer online battle arena (**MOBA**) game developed and published by Riot Games. With a massive player base worldwide, LoL has become a staple in the eSports industry. Players assume the roles of powerful champions, forming teams and battling against each other in intense strategic matches. The game features a vast roster of unique champions, each with their own abilities and playstyles, providing endless possibilities for dynamic gameplay and strategic depth. 
+
+Based on our gaming experiences with League of Legends, we are interested in the following question: 
+**Which role “carries” (does the best) in their team more often: Top (top) or Mid laners(mid)?**
+
+To answer this question, we use the dataset containing 2022 League of Legends eSports match data from OraclesElixir, as it's representative for the League of Legends player population and meta for 2022. Also it provides valuable insights into the performance and dynamics of professional teams in the game for the future. Analyzing this dataset can offer a deeper understanding of the strategies, strengths, and weaknesses of different roles within a team.
 
 By examining the match data from 2022, we can provide evidence-based conclusions about the impact and effectiveness of top and mid laners in carrying their teams to victory.
-Maybe our conclusion about which position carries more can activate potential players to try playing that position or the specific champion/hero more often and even train themselves to be team leaders.
+
+Maybe our conclusion about which position carries more can activate potential players to try playing that position or the specific champion/hero more often and even be more responsible for making contributions to the whole team's progress and development.
 
 
 ### 2022 League of Legends eSports match dataset breakdown(from OraclesElixir): ###
@@ -168,7 +174,7 @@ We set such an alternative hypothesis because from the boxplot shown above, we a
 
 ## Choice of test statistics ##
 
-We choose difference in group means between mid laners and top laners because the distributions of carry score between top laners and mid laners are roughly shifted versions of similar shapes.
+We choose difference in group means between mid laners and top laners because the distribution of carry scores between top laners and mid laners are roughly shifted versions of similar shapes.
 
 <iframe src="assets/hypothesis_stat.html" width=800 height=600 frameBorder=0></iframe>
 
@@ -182,8 +188,10 @@ We choose 0.05 significance level because it is widely used in many hypothesis t
 
 <iframe src="assets/hypo_test.html" width=800 height=600 frameBorder=0></iframe>
 
+We calculate p-value by computing the proportion of simulated difference in group means from the permutation testing that are smaller than the observed difference in group means.
+
 ## Conclusion ##
 
 We reject the null hypothesis, which suggests that Mid laners might possibly carry (do the best) in their team more often than top. This rejection is based on our statistical analysis, specifically the calculation of the p-value, which is a measure of the likelihood of obtaining a result as extreme as, or more extreme than, the one observed if the null hypothesis were true. In our case, the obtained p-value is less than the commonly used significance level of 0.05 (0.0 < 0.05), indicating that the observed result is statistically significant.
 
-However, it is important to consider the limitations of our study, such as the specific context, sample size, and potential confounding variables, when interpreting these results. Further research and analysis may be warranted to gain a deeper understanding of the relationship between Mid laners and their impact on team performance.
+However, it is important to consider the limitations of our study, such as the specific context, sample size, and potential confounding variables, when interpreting these results. Further research and analysis may be warranted to gain a deeper understanding of Mid laners' and Top laners' impact on team performance.
