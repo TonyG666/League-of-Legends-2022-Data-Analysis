@@ -72,7 +72,7 @@ also a kind of values called "unknown team". We replace them with NaN to clean t
 ### Below is the head of our dataframe after cleaning ###
 
 ```
-print(league_position.to_markdown(index=True))
+print(league_head.to_markdown(index=False))
 ```
 
 | datacompleteness   | teamname                 | position   |   standardized_kda |   standardized_gpm |   standardized_cspm |   carry_score |
@@ -92,10 +92,17 @@ The graph is skewed to the right, inferring that most players' standardized KDA 
 
 ### Bivariate boxplot showing information about carry score among all player positions ###
 
-The boxplot shows various information of carry score such as median, interquatile range, and outliers. The x axis shows carry score in standardized units, while the y axis labels each of the five positions. While top laners and mid laners have similar data, 
+The boxplot shows various information of carry score such as median, interquatile range, and outliers. The x axis shows carry score in standardized units, while the y axis labels each of the five positions. While top laners and mid laners have similar carry score distribution, mid laners' scores are a little higher overall.
+* Interestingly, carry score tend to have more outliers when carry score is high.
 
 <iframe src="assets/boxplot.html" width=800 height=600 frameBorder=0></iframe>
 
+
+### Below is a grouped table showing respective mean standardized KDA, GPM, CSPM, and carry score ###
+
+```
+print(league_position.to_markdown(index=True))
+```
 
 | position   |   standardized_kda |   standardized_gpm |   standardized_cspm |   carry_score |
 |:-----------|-------------------:|-------------------:|--------------------:|--------------:|
@@ -104,3 +111,5 @@ The boxplot shows various information of carry score such as median, interquatil
 | mid        |         0.0684821  |           0.430029 |            0.625648 |      0.37472  |
 | sup        |        -0.0218033  |          -1.35438  |           -1.67982  |     -1.01867  |
 | top        |        -0.174883   |           0.321859 |            0.489504 |      0.21216  |
+
+* It demonstrates the mean statistics for each position in League of Legends and can be used for comparison among different positions. For example, bottom laners has the highest KDA, GPM, CSPM, and carry score in standardized units among all other positions.
