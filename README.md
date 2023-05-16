@@ -85,6 +85,8 @@ The graph is skewed to the right, inferring that most players' standardized KDA 
 
 <iframe src="assets/univariate_kda.html" width=800 height=600 frameBorder=0></iframe>
 
-### Bivariate boxplot showing ... ###
+### Bivariate boxplot showing information about carry score among all player positions ###
+
+The boxplot shows various information of carry score such as median, interquatile range, and outliers. The x axis shows carry score in standardized units, while the y axis labels each of the five positions.
 
 <iframe src="assets/boxplot.html" width=800 height=600 frameBorder=0></iframe>
