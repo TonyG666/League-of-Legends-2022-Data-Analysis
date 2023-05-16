@@ -23,29 +23,29 @@ By examining the match data from 2022, we can provide evidence-based conclusions
 ### 2022 League of Legends eSports match dataset breakdown(from OraclesElixir): ###
 
 
-**Number of rows**: 149400
+**Number of rows in original dataset**: 149400
 
 **Meaning of each row**: a single player's eSport match statistics in a single game
 
-
 **Relevant Columns:**
 
-1. **datacompleteness**: Whether a single player's statistics in a single eSport match is filled in original dataset before we did data cleaning. 
+1. **datacompleteness**: Whether a single player's statistics in a single eSport match is **filled** in original dataset before we did data cleaning. 
 
-2. **teamname**: The name of the team the player is in.
+2. **teamname**: The **name of the team** the player is in.
 
-3. **position**: The player's position in a single eSport match. League of Legends only has five positions: Top laners(top), Jungle(jng), Mid laners(mid), Bottom laners(bot), Support(sup). Note that in A League of Legends map, there are three lanes total and jungle areas. Top laner covers top lane, Mid laner covers mid lane, Jungle covers jungle areas, Support and Bottom laner cover the bottom lane.
+3. **position**: The player's **position** in a single eSport match. League of Legends only has five positions: Top laners(**top**), Jungle(**jng**), Mid laners(**mid**), Bottom laners(**bot**), and Support(**sup**). 
+*Note that in a League of Legends map, there are three lanes total and jungle areas. Top laner covers top lane, Mid laner covers mid lane, Jungle covers jungle areas, Support and Bottom laner cover the bottom lane.*
 
-4. **kills**: The number of kills a player have in a single eSport match.
+4. **kills**: The **number of kills** a player have in a single eSport match.
 
-5. **assists**: The number of assists a player have in a single eSport match.
+5. **assists**: The **number of assists** a player have in a single eSport match.
 
-6. **death**: The number of deaths a player have in a single eSport match.
+6. **death**: The **number of deaths** a player have in a single eSport match.
 
-7. **earned gpm**: Earned gold per minute by player in a single game. Gold in League of Legends is used to buy items in order to make your character stronger.
+7. **earned gpm**: earned **Gold Per Minute** by player in a single game. 
+*Gold in League of Legends is used to buy items in order to make your character stronger.*
 
-8. **cspm**: Creep score per minute, indicating the number of minions killed by a player per minute.
-
+8. **cspm**: **Creep Score Per Minute**, indicating the number of **minions** killed by a player per minute.
 
 
 # Cleaning and Exploratory Data Analysis
@@ -53,7 +53,7 @@ By examining the match data from 2022, we can provide evidence-based conclusions
 
 ## Data Cleaning
 
-1. We create a copy of the original dataframe in order to keep original dataframe unchanged.
+1. We create a **copy** of the original dataset in order to keep it unchanged.
 
 2. Each team has five players and a match contains two teams and so ten players. After examining the file, we find every 11th row and 12th row to be two teams' overall statistics and the ten rows before them to be these two teams' individual players' statistics of this match. As our goal is to examine individual performances of top laners and mid laners, we drop all rows of whole teams.
 
