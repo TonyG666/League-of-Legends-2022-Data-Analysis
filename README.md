@@ -124,18 +124,61 @@ We don't believe that there is column in our dataset that is NMAR(NMAR means tha
 
 ## Missingness Dependency ##
 
-## MAR ## 
+## MAR(Missing at Random) ##
+**Note that MAR means that a column's missing values depend on other columns and not on missing values themselves**
 
-The distribution of datacompleteness column when teamname column is missing and the distribution of datacompleteness column when teamname column is not missing
+* We performed permutation tests to check if "datacompleteness" columns depends on "teamname" or not. 
+
+* We computed the p-value by computing the proportion of simulated total variation distances from the permutation testing that are bigger than the observed total variation distance.
+
+* After obtaining the our p-value for this permutation testing: 0.004, we reject the null hypothesis that In year 2022, distribution of "datacompleteness" when "teamname" is missing is not same as when "teamname" is not missing. 
+
+* The result of this permutation leads to MAR, "datacompleteness" depend on "teamname" missingness.
 
 <iframe src="assets/missingness_tmnm.html" width=800 height=600 frameBorder=0></iframe>
 
-
-
-## MCAR ##
-
 <iframe src="assets/datacompleteness_perm.html" width=800 height=600 frameBorder=0></iframe>
+
+## MCAR(Missing Completely at Random) ##
+**Note that MCAR means that a column's missing values depend neither on other columns nor on missing values themselves**
+
+* We performed permutation tests to check if "datacompleteness" columns depends on "teamname" or not. 
+
+* We computed the p-value by computing the proportion of simulated total variation distances from the permutation testing that are bigger than the observed total variation distance.
+
+* After obtaining the our p-value for this permutation testing: 0.004, we reject the null hypothesis that In year 2022, distribution of "datacompleteness" when "teamname" is missing is not same as when "teamname" is not missing. 
+
+* The result of this permutation leads to MAR, "datacompleteness" depend on "teamname" missingness.
 
 <iframe src="assets/missingness_pos.html" width=800 height=600 frameBorder=0></iframe>
 
 <iframe src="assets/position_perm.html" width=800 height=600 frameBorder=0></iframe>
+
+
+# Hypothesis testing #
+
+We are focused on the following question: Which role “carries” (does the best) in their team more often: Top (top) or Mid laners(mid)?"
+
+## Null and ALternative hypothesis ##
+
+Null hypothesis: Top laners carries(does the best) in their team as same as the Mid laners(mid).
+
+Alternative hypothesis: Mid laners carries (does the best) in their team more often than Top laners.
+
+## Choice of test statistics ##
+
+Difference in group means between mid laners and top laners
+
+<iframe src="assets/hypothesis_stat.html" width=800 height=600 frameBorder=0></iframe>
+
+## Significance level ##
+
+95% significance level
+
+## P-value ##
+
+0.00
+
+## Conclusion ##
+
+We reject the null hypothesis that Top laners carries(does the best) in their team as same as the Mid laners(mid). Mid laners might carry more than Top laners.
