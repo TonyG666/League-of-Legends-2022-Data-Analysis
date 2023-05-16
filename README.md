@@ -69,6 +69,11 @@ also a kind of values called "unknown team". We replace them with NaN to clean t
 
 9. We then drop the columns not in standardized units, specifically **kills**, **assists**, **deaths**, **earned gpm**, **cspm**
 
+### Below is the head of our dataframe after cleaning ###
+
+```
+print(league_position.to_markdown(index=True))
+```
 
 | datacompleteness   | teamname                 | position   |   standardized_kda |   standardized_gpm |   standardized_cspm |   carry_score |
 |:-------------------|:-------------------------|:-----------|-------------------:|-------------------:|--------------------:|--------------:|
@@ -87,7 +92,7 @@ The graph is skewed to the right, inferring that most players' standardized KDA 
 
 ### Bivariate boxplot showing information about carry score among all player positions ###
 
-The boxplot shows various information of carry score such as median, interquatile range, and outliers. The x axis shows carry score in standardized units, while the y axis labels each of the five positions. While top, mid, jng, and bot positions 
+The boxplot shows various information of carry score such as median, interquatile range, and outliers. The x axis shows carry score in standardized units, while the y axis labels each of the five positions. While top laners and mid laners have similar data, 
 
 <iframe src="assets/boxplot.html" width=800 height=600 frameBorder=0></iframe>
 
