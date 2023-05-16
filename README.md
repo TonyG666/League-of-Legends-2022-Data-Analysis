@@ -157,23 +157,24 @@ We don't believe that there is column in our dataset that is NMAR(NMAR means tha
 
 # Hypothesis testing #
 
-We are focused on the following question: Which role “carries” (does the best) in their team more often: Top (top) or Mid laners(mid)?"
+We are interested in the following question: Which role “carries” (does the best) in their team more often: Top (top) or Mid laners(mid)?"
 
 ## Null and ALternative hypothesis ##
 
 Null hypothesis: Top laners carries(does the best) in their team as same as the Mid laners(mid).
 
 Alternative hypothesis: Mid laners carries (does the best) in their team more often than Top laners.
+We set such an alternative hypothesis because from the boxplot shown above, we are more likely to think that mid laners might carry more than the top laners. Our alternative hypothesis also avoided two-sided tests.
 
 ## Choice of test statistics ##
 
-Difference in group means between mid laners and top laners
+We choose difference in group means between mid laners and top laners because the distributions of carry score between top laners and mid laners are roughly shifted versions of similar shapes.
 
 <iframe src="assets/hypothesis_stat.html" width=800 height=600 frameBorder=0></iframe>
 
 ## Significance level ##
 
-95% significance level
+We choose 0.05 significance level because it is widely used in many hypothesis testings.
 
 ## P-value ##
 
@@ -181,4 +182,6 @@ Difference in group means between mid laners and top laners
 
 ## Conclusion ##
 
-We reject the null hypothesis that Top laners carries(does the best) in their team as same as the Mid laners(mid). Mid laners might carry more than Top laners.
+We reject the null hypothesis, which suggests that Mid laners might possibly carry (do the best) in their team more often than top. This rejection is based on our statistical analysis, specifically the calculation of the p-value, which is a measure of the likelihood of obtaining a result as extreme as, or more extreme than, the one observed if the null hypothesis were true. In our case, the obtained p-value is less than the commonly used significance level of 0.05 (0.0 < 0.05), indicating that the observed result is statistically significant.
+
+However, it is important to consider the limitations of our study, such as the specific context, sample size, and potential confounding variables, when interpreting these results. Further research and analysis may be warranted to gain a deeper understanding of the relationship between Mid laners and their impact on team performance.
