@@ -87,6 +87,15 @@ The graph is skewed to the right, inferring that most players' standardized KDA 
 
 ### Bivariate boxplot showing information about carry score among all player positions ###
 
-The boxplot shows various information of carry score such as median, interquatile range, and outliers. The x axis shows carry score in standardized units, while the y axis labels each of the five positions.
+The boxplot shows various information of carry score such as median, interquatile range, and outliers. The x axis shows carry score in standardized units, while the y axis labels each of the five positions. While top, mid, jng, and bot positions 
 
 <iframe src="assets/boxplot.html" width=800 height=600 frameBorder=0></iframe>
+
+
+| position   |   standardized_kda |   standardized_gpm |   standardized_cspm |   carry_score |
+|:-----------|-------------------:|-------------------:|--------------------:|--------------:|
+| bot        |         0.122206   |           0.798652 |            0.793597 |      0.571485 |
+| jng        |         0.00599775 |          -0.196162 |           -0.22893  |     -0.139698 |
+| mid        |         0.0684821  |           0.430029 |            0.625648 |      0.37472  |
+| sup        |        -0.0218033  |          -1.35438  |           -1.67982  |     -1.01867  |
+| top        |        -0.174883   |           0.321859 |            0.489504 |      0.21216  |
