@@ -17,6 +17,7 @@ Maybe our conclusion about which position carries more can activate potential pl
 
 
 Number of rows: 149400
+
 Meaning of each row: a single player's eSport match statistics in a single game
 
 
@@ -57,7 +58,7 @@ The boolean values make it easier to do analysis.
 also a kind of values called "unknown team". We replace them with NaN to clean the data.
 
 5. kda_standardized: Kill Death Assist Ratio by a player in a single game, calculated by 
-**(Kills + Assists) / Deaths**, and then standardized. Unstandardized **Kills**, **Assists**, **Deaths** are three columns we kept. Refer to **Relevant Columns:** section above.
+**(Kills + Assists) / Deaths**, and then standardized. Unstandardized **Kills**, **Assists**, **Deaths** are three columns we kept before. Refer to **Relevant Columns** section above.
 
 6. gpm_standardized: Earned gold per minute by player in a single game, and then standardized. Unstandardized GPM is provided in original file directly.
 
