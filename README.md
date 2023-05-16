@@ -77,3 +77,6 @@ also a kind of values called "unknown team". We replace them with NaN to clean t
 | True               | Fredit BRION Challengers | mid        |          -0.507778 |          -0.242903 |            0.134244 |    -0.205479  |
 | True               | Fredit BRION Challengers | bot        |          -0.759038 |           0.111582 |            0.506755 |    -0.0469004 |
 | True               | Fredit BRION Challengers | sup        |          -0.675285 |          -1.45253  |           -1.57038  |    -1.23273   |
+
+
+<iframe src="assets/univariate_kda.html" width=800 height=600 frameBorder=0></iframe>
