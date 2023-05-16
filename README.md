@@ -78,7 +78,13 @@ also a kind of values called "unknown team". We replace them with NaN to clean t
 | True               | Fredit BRION Challengers | bot        |          -0.759038 |           0.111582 |            0.506755 |    -0.0469004 |
 | True               | Fredit BRION Challengers | sup        |          -0.675285 |          -1.45253  |           -1.57038  |    -1.23273   |
 
+### Univariate histogram showing the distribution of the standardized KDA among all players. ###
+
+The x axis shows standardized KDA in standardized units, ranging from -1 to 8, with a bin size of 0.5 standardized units. The y axis shows the amount of players with their specific standardized KDA.
+The graph is skewed to the right, inferring that most players' standardized KDA is in the range of -1~0 standardized unit, which further means that a lot of players' KDA is relatively lower compared to the average value within the dataset. 
 
 <iframe src="assets/univariate_kda.html" width=800 height=600 frameBorder=0></iframe>
 
-#aaa#
+### Bivariate boxplot showing ... ###
+
+<iframe src="assets/boxplot.html" width=800 height=600 frameBorder=0></iframe>
