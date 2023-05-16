@@ -122,5 +122,16 @@ print(league_position.to_markdown(index=True))
 
 We don't believe that there is column in our dataset that is NMAR(NMAR means that the missingness of a column in our dataset is dependent on the missing values themselves). We would like to obtain additional information about possible correlation between datacompleteness and missingness in teamname column in order to see the type of missingness of the teamname column.
 
+## Missingness Dependency ##
 
-<iframe src="assets/missingness_perm.html" width=800 height=600 frameBorder=0></iframe>
+## MAR ## 
+
+The distribution of datacompleteness column when teamname column is missing and the distribution of datacompleteness column when teamname column is not missing
+
+<iframe src="assets/missingness_tmnm.html" width=800 height=600 frameBorder=0></iframe>
+
+
+
+## MCAR ##
+
+<iframe src="assets/datacompleteness_perm.html" width=800 height=600 frameBorder=0></iframe>
