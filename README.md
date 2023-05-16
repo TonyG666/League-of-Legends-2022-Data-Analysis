@@ -127,13 +127,13 @@ We don't believe that there is column in our dataset that is NMAR(NMAR means tha
 ## MAR(Missing at Random) ##
 **Note that MAR means that a column's missing values depend on other columns and not on missing values themselves**
 
-* We performed permutation tests to check if "datacompleteness" columns depends on "teamname" or not. 
+* We performed permutation tests to check if "teamname" columns depends on "datacompleteness" or not. 
 
 * We computed the p-value by computing the proportion of simulated total variation distances from the permutation testing that are bigger than the observed total variation distance.
 
-* After obtaining the our p-value for this permutation testing: 0.004, we reject the null hypothesis that In year 2022, distribution of "datacompleteness" when "teamname" is missing is not same as when "teamname" is not missing. 
+* After obtaining the our p-value for this permutation testing: 0.004, we reject the null hypothesis that in year 2022, distribution of "datacompleteness" when "teamname" is missing is same as when "teamname" is not missing. 
 
-* The result of this permutation leads to MAR, "datacompleteness" depend on "teamname" missingness.
+* The result of this permutation leads to MAR, which is that "teamname" missingness depends on "datacompleteness" 
 
 <iframe src="assets/missingness_tmnm.html" width=800 height=600 frameBorder=0></iframe>
 
@@ -179,6 +179,8 @@ We choose 0.05 significance level because it is widely used in many hypothesis t
 ## P-value ##
 
 0.00
+
+<iframe src="assets/hypo_test.html" width=800 height=600 frameBorder=0></iframe>
 
 ## Conclusion ##
 
