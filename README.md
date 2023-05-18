@@ -1,6 +1,8 @@
-# League of Legends 2022 Data Analysis
+# 2022 League of Legends ESports Match Data Analysis
 
 By Ricky Zhu(r2zhu@ucsd.edu) and Tony Guo(xig003@ucsd.edu)
+
+---
 
 # Introduction
 
@@ -47,6 +49,7 @@ By examining the match data from 2022, we can provide evidence-based conclusions
 
 8. **cspm**: **Creep Score Per Minute**, indicating the number of **minions** killed by a player per minute.
 
+---
 
 # Cleaning and Exploratory Data Analysis
 
@@ -118,6 +121,7 @@ print(league_position.to_markdown(index=True))
 
 The table demonstrates the mean statistics for each position in League of Legends and can be used for comparison among different positions. Also, it provides a more specific and detailed numerical illustration of the five positions. For example, mid and top are the two positions with the smallest difference in mean standardized carry score.
 
+---
 
 # Assessment of Missingness #
 
@@ -158,6 +162,7 @@ We don't believe that there is column in our dataset that is NMAR. We would like
 
 <iframe src="assets/position_perm.html" width=800 height=600 frameBorder=0></iframe>
 
+---
 
 # Hypothesis testing #
 
@@ -193,3 +198,5 @@ We calculate p-value by computing the proportion of simulated difference in grou
 We **reject the null hypothesis**, which suggests that Mid laners might possibly carry (do the best) in their team more often than Top laners. This rejection is based on our statistical analysis, specifically the calculation of the p-value, which is a measure of the likelihood of obtaining a result as extreme as, or more extreme than, the one observed if the null hypothesis is true. In our case, the obtained p-value is less than the commonly used significance level of 0.05 (0.0 < 0.05).
 
 However, it is important to consider the **limitations** of our study, such as the specific context, population size, and potential confounding variables, when interpreting these results. Further research and analysis may be warranted to gain a deeper understanding of Mid laners' and Top laners' impact on team performance and about which position "carries" more.
+
+---
