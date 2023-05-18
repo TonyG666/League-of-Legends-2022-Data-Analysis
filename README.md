@@ -128,7 +128,7 @@ The table above demonstrates the **mean statistics** for each position in League
 ## NMAR Analysis ##
 **Note that NMAR means that the missingness of a column is dependent on the missing values in the column themselves**
 
-We don't believe that there is column in our dataset that is NMAR. We would like to obtain additional information about **possible correlation** between **datacompleteness** column and missingness in **teamname** column as well as **position** column and missingness in **teamname** column in order to see the type of missingness of the **teamname** column.
+We don't believe that there is column in our dataset that is NMAR because we believe that the missingness of column **teamname** may depend on other columns in this dataset. We would like to obtain additional information about **possible correlation** between **datacompleteness** column and missingness in **teamname** column as well as **position** column and missingness in **teamname** column in order to see the type of missingness of the **teamname** column. In League of Legends, many variables can influence the missingness of columns in the dataset including the team roster changes, the type of professional competitions like regional playoffs versus world championship, incomplete games with unexpected technical difficulties, etc.
 
 ## Missingness Dependency ##
 
