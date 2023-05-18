@@ -15,7 +15,7 @@ By Ricky Zhu(r2zhu@ucsd.edu) and Tony Guo(xig003@ucsd.edu)
 Based on our gaming experiences with League of Legends, we are interested in the following question: 
 * **Which role “carries” (does the best) in their team more often: Top (top) or Mid laners(mid)?**
 
-To answer this question, we use the dataset containing 2022 League of Legends eSports match data from **OraclesElixir**, as it's representative for the League of Legends player population and meta for **2022**. Also it provides valuable insights into the performance and dynamics of professional teams in the game for the future. Analyzing this dataset can offer a deeper understanding of the strategies, strengths, and weaknesses of different roles within a team.
+To answer this question, we use the dataset containing 2022 League of Legends eSports match data from [OraclesElixir](https://oracleselixir.com/tools/downloads), as it's representative for the League of Legends player population and meta for **2022**. Also it provides valuable insights into the performance and dynamics of professional teams in the game for the future. Analyzing this dataset can offer a deeper understanding of the strategies, strengths, and weaknesses of different roles within a team.
 
 By examining the match data from 2022, we can provide evidence-based conclusions about the impact and effectiveness of **top and mid laners** in carrying their teams to victory.
 
@@ -198,5 +198,3 @@ We calculate p-value by computing the proportion of simulated difference in grou
 We **reject the null hypothesis**, which suggests that Mid laners might possibly carry (do the best) in their team more often than Top laners. This rejection is based on our statistical analysis, specifically the calculation of the p-value, which is a measure of the likelihood of obtaining a result as extreme as, or more extreme than, the one observed if the null hypothesis is true. In our case, the obtained p-value is less than the commonly used significance level of 0.05 (0.0 < 0.05).
 
 However, it is important to consider the **limitations** of our study, such as the specific context, population size, and potential confounding variables, when interpreting these results. Further research and analysis may be warranted to gain a deeper understanding of Mid laners' and Top laners' impact on team performance and about which position "carries" more.
-
----
